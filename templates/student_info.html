@@ -3,6 +3,18 @@
 Student Info
 {% endblock %}
 {% block content %}
-  <h1>{{ first }} {{ last }}</h1>
+  <h1>{{ first_name }} {{ last_name }}</h1>
   <p>GitHub Account: {{ github }}</p>
+  <table style="width=400%">
+    <tr>
+        <th>Project Title</th>
+        <th>Grade</th>
+    </tr>
+    {% for item in grades_list %}
+    <tr>
+        <td>{{ item[0] }}</td>
+        <td>{{ item[1] }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}
