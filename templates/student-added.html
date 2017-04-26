@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Confirm New Student{% endblock %}
+{% block content %}
+
+<p>{{ first_name }}</p>
+<p>{{ last_name }}</p>
+<p>{{ github }}</p>
+
+<a href="/student?github={{ github }}">Student</a>
+{% endblock %}
